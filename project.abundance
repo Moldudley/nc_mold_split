@@ -2688,6 +2688,310 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.2,
+      "y": 0.7,
+      "uniqueID": "id-1712",
+      "name": "pegs",
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 1,
+          "y": 0.5,
+          "uniqueID": "id-1714",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.1,
+          "y": 0.3,
+          "uniqueID": "id-1716",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 0.2,
+              "currentEquation": ".2"
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.3,
+          "y": 0.6,
+          "uniqueID": "id-1719",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": -0.125
+            },
+            {
+              "name": "yDist",
+              "ioValue": 3,
+              "currentEquation": "3"
+            },
+            {
+              "name": "zDist",
+              "ioValue": 10,
+              "currentEquation": "10"
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.4,
+          "y": 0.9,
+          "uniqueID": "id-1725",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": -0.125,
+              "currentEquation": "-.125"
+            },
+            {
+              "name": "yDist",
+              "ioValue": -3,
+              "currentEquation": "-3"
+            },
+            {
+              "name": "zDist",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.2,
+          "y": 0.3,
+          "uniqueID": "id-1731",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 0.2,
+              "currentEquation": ".2"
+            }
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.9,
+          "y": 0.5,
+          "uniqueID": "id-1735",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1716",
+          "ap2ID": "id-1731"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-1719",
+          "ap2ID": "id-1735"
+        },
+        {
+          "ap2Name": "Shape 2",
+          "ap1ID": "id-1725",
+          "ap2ID": "id-1735"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1731",
+          "ap2ID": "id-1719"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1731",
+          "ap2ID": "id-1725"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1735",
+          "ap2ID": "id-1714"
+        }
+      ],
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.5,
+      "y": 0.6,
+      "uniqueID": "id-1740",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "cut-cut-#ca7c565da88b39c8f03cf5353d929883-rotate-move-extrude-rectangle-40000-40000-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-4000-0-0-10-0-0-90",
+            "tags": [],
+            "bom": [
+              "Haack series nose cone, length 19.25mm, outer diameter 6.825mm, C=0"
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "dimension": "3D"
+          }
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": [
+              {
+                "geometry": "move-extrude-circle-0.1-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.2--0.125-3-10",
+                "dimension": "3D",
+                "tags": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.22500000000000003,
+                    2.9,
+                    10
+                  ],
+                  "max": [
+                    -0.02499999999999998,
+                    3.1,
+                    10.2
+                  ]
+                }
+              },
+              {
+                "geometry": "move-extrude-circle-0.1-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.2--0.125--3-10",
+                "dimension": "3D",
+                "tags": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.22500000000000003,
+                    -3.1,
+                    10
+                  ],
+                  "max": [
+                    -0.02499999999999998,
+                    -2.9,
+                    10.2
+                  ]
+                }
+              }
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": [],
+            "dimension": "3D",
+            "nonReplicadSerialized": [],
+            "boundingBox": {
+              "min": [
+                -0.22500000000000003,
+                -3.1,
+                10
+              ],
+              "max": [
+                -0.02499999999999998,
+                3.1,
+                10.2
+              ]
+            }
+          }
+        }
+      ],
+      "unionType": "Fusion"
     }
   ],
   "allConnectors": [
@@ -2705,6 +3009,21 @@
       "ap2Name": "remove",
       "ap1ID": "id-1625",
       "ap2ID": "id-1705"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-1625",
+      "ap2ID": "id-1196"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1625",
+      "ap2ID": "id-1740"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1712",
+      "ap2ID": "id-1740"
     }
   ],
   "unitsKey": "Inches",
