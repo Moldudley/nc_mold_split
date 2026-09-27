@@ -2717,8 +2717,8 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.17,
-              "currentEquation": ".17"
+              "ioValue": 0.15,
+              "currentEquation": ".15"
             }
           ]
         },
@@ -2787,8 +2787,8 @@
             },
             {
               "name": "height",
-              "ioValue": 0.2,
-              "currentEquation": ".2"
+              "ioValue": 0.18,
+              "currentEquation": ".18"
             }
           ]
         },
@@ -2924,7 +2924,7 @@
           "ioValue": {
             "geometry": [
               {
-                "geometry": "move-extrude-circle-0.085-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.2--0.125-3-10",
+                "geometry": "move-extrude-circle-0.075-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.18--0.125-3-10",
                 "dimension": "3D",
                 "tags": [],
                 "plane": {
@@ -2948,19 +2948,19 @@
                 "bom": [],
                 "boundingBox": {
                   "min": [
-                    -0.21000000000000002,
-                    2.915,
+                    -0.2,
+                    2.925,
                     10
                   ],
                   "max": [
-                    -0.039999999999999994,
-                    3.085,
-                    10.2
+                    -0.05,
+                    3.075,
+                    10.18
                   ]
                 }
               },
               {
-                "geometry": "move-extrude-circle-0.085-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.2--0.125--3-10",
+                "geometry": "move-extrude-circle-0.075-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.18--0.125--3-10",
                 "dimension": "3D",
                 "tags": [],
                 "plane": {
@@ -2984,19 +2984,19 @@
                 "bom": [],
                 "boundingBox": {
                   "min": [
-                    -0.21000000000000002,
-                    -3.085,
+                    -0.2,
+                    -3.075,
                     10
                   ],
                   "max": [
-                    -0.039999999999999994,
-                    -2.915,
-                    10.2
+                    -0.05,
+                    -2.925,
+                    10.18
                   ]
                 }
               },
               {
-                "geometry": "move-extrude-circle-0.085-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.2--2.67-0-10",
+                "geometry": "move-extrude-circle-0.075-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.18--2.67-0-10",
                 "dimension": "3D",
                 "tags": [],
                 "plane": {
@@ -3020,14 +3020,14 @@
                 "bom": [],
                 "boundingBox": {
                   "min": [
-                    -2.755,
-                    -0.085,
+                    -2.745,
+                    -0.075,
                     10
                   ],
                   "max": [
-                    -2.585,
-                    0.085,
-                    10.2
+                    -2.5949999999999998,
+                    0.075,
+                    10.18
                   ]
                 }
               }
@@ -3056,14 +3056,14 @@
             "nonReplicadSerialized": [],
             "boundingBox": {
               "min": [
-                -2.755,
-                -3.085,
+                -2.745,
+                -3.075,
                 10
               ],
               "max": [
-                -0.039999999999999994,
-                3.085,
-                10.2
+                -0.05,
+                3.075,
+                10.18
               ]
             }
           }
@@ -3099,8 +3099,8 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.19,
-              "currentEquation": "0.19"
+              "ioValue": 0.17,
+              "currentEquation": "0.17"
             }
           ]
         },
@@ -3256,6 +3256,176 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.4,
+      "y": 0.1,
+      "uniqueID": "id-1793",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "ExtractTag",
+      "x": 0.6,
+      "y": 0.6,
+      "uniqueID": "id-1797",
+      "name": "Extract bottom half",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tagIndex": 0,
+      "selectedTags": [
+        "bottom half"
+      ],
+      "includeUntagged": false,
+      "notKeepOut": false
+    },
+    {
+      "atomType": "Tag",
+      "x": 0.6,
+      "y": 0.6,
+      "uniqueID": "id-1800",
+      "name": "bottom half",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tags": [
+        "bottom half"
+      ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.7,
+      "y": 0.6,
+      "uniqueID": "id-1803",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "STL Tolerance",
+          "ioValue": 0.002
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "nc_mold_split",
+          "currentEquation": "nc_mold_split"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "nc_mold_split"
+    },
+    {
+      "atomType": "Tag",
+      "x": 0.5,
+      "y": 0.1,
+      "uniqueID": "id-1809",
+      "name": "top half",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tags": [
+        "top half"
+      ]
+    },
+    {
+      "atomType": "ExtractTag",
+      "x": 0.6,
+      "y": 0.1,
+      "uniqueID": "id-1815",
+      "name": "Extract top half",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tagIndex": 0,
+      "selectedTags": [
+        "top half"
+      ],
+      "includeUntagged": false,
+      "notKeepOut": false
+    },
+    {
+      "atomType": "Export",
+      "x": 0.7,
+      "y": 0.2,
+      "uniqueID": "id-1818",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "STL Tolerance",
+          "ioValue": 0.002
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "nc_mold_split",
+          "currentEquation": "nc_mold_split"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "nc_mold_split"
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.9,
+      "y": 0.4,
+      "uniqueID": "id-1824",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -3275,19 +3445,69 @@
       "ap2ID": "id-1705"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-1625",
-      "ap2ID": "id-1196"
-    },
-    {
       "ap2Name": "Shape 1",
       "ap1ID": "id-1625",
       "ap2ID": "id-1740"
     },
     {
       "ap2Name": "Shape 2",
+      "ap1ID": "id-1625",
+      "ap2ID": "id-1824"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-1705",
+      "ap2ID": "id-1793"
+    },
+    {
+      "ap2Name": "Shape 2",
       "ap1ID": "id-1712",
       "ap2ID": "id-1740"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1740",
+      "ap2ID": "id-1800"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-1756",
+      "ap2ID": "id-1793"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1793",
+      "ap2ID": "id-1809"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1793",
+      "ap2ID": "id-1824"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1797",
+      "ap2ID": "id-1803"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1800",
+      "ap2ID": "id-1797"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1809",
+      "ap2ID": "id-1815"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1815",
+      "ap2ID": "id-1818"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-1824",
+      "ap2ID": "id-1196"
     }
   ],
   "unitsKey": "Inches",
