@@ -3468,6 +3468,10 @@
         {
           "name": "Shape3",
           "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape4",
+          "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
     },
@@ -3838,9 +3842,19 @@
       "ap2ID": "id-2673"
     },
     {
+      "ap2Name": "retain",
+      "ap1ID": "id-1198",
+      "ap2ID": "id-2707"
+    },
+    {
       "ap2Name": "remove",
       "ap1ID": "id-2673",
       "ap2ID": "id-2707"
+    },
+    {
+      "ap2Name": "Shape3",
+      "ap1ID": "id-2707",
+      "ap2ID": "id-1824"
     }
   ],
   "unitsKey": "Inches",
