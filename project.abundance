@@ -20,7 +20,7 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.2,
+      "x": 0,
       "y": 0.4,
       "uniqueID": "id-1198",
       "name": "Mold",
@@ -2720,8 +2720,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.2,
-      "y": 0.7,
+      "x": 0,
+      "y": 0.6,
       "uniqueID": "id-1712",
       "name": "pegs",
       "topLevel": false,
@@ -3103,7 +3103,7 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.2,
+      "x": 0,
       "y": 0.1,
       "uniqueID": "id-1756",
       "name": "divots",
@@ -3416,8 +3416,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.3,
-      "y": 0.8,
+      "x": 0.1,
+      "y": 0.7,
       "uniqueID": "id-2673",
       "name": "Cross-Section",
       "ioValues": [
@@ -3679,8 +3679,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.4,
-      "y": 0.8,
+      "x": 0.2,
+      "y": 0.7,
       "uniqueID": "id-2707",
       "ioValues": [
         {
@@ -4029,7 +4029,7 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.4,
+      "x": 0.2,
       "y": 0.9,
       "uniqueID": "id-2800",
       "name": "top divots",
@@ -4184,8 +4184,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.5,
-      "y": 0.8,
+      "x": 0.3,
+      "y": 0.9,
       "uniqueID": "id-2831",
       "ioValues": [
         {
@@ -4337,7 +4337,7 @@
     },
     {
       "atomType": "Rectangle",
-      "x": 0.6,
+      "x": 0.4,
       "y": 0.8,
       "uniqueID": "id-2865",
       "ioValues": [
@@ -4347,8 +4347,110 @@
         },
         {
           "name": "y length",
+          "ioValue": 0.1,
+          "currentEquation": ".1"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4,
+      "y": 0.8,
+      "uniqueID": "id-2869",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
           "ioValue": 0.2,
           "currentEquation": ".2"
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.6,
+      "y": 0.8,
+      "uniqueID": "id-2873",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0.2,
+          "currentEquation": ".2"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 20,
+          "currentEquation": "20"
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.4,
+      "y": 0.9,
+      "uniqueID": "id-2910",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 0.2,
+          "currentEquation": "0.2"
+        },
+        {
+          "name": "y length",
+          "ioValue": 0.1
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4,
+      "y": 0.9,
+      "uniqueID": "id-2911",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 0.2
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.6,
+      "y": 0.9,
+      "uniqueID": "id-2912",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": -0.2,
+          "currentEquation": "-0.2"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 20
         }
       ]
     }
@@ -4493,6 +4595,26 @@
       "ap2Name": "geometry",
       "ap1ID": "id-2844",
       "ap2ID": "id-2847"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2865",
+      "ap2ID": "id-2869"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2869",
+      "ap2ID": "id-2873"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2910",
+      "ap2ID": "id-2911"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2911",
+      "ap2ID": "id-2912"
     }
   ],
   "unitsKey": "Inches",
