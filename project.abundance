@@ -3319,7 +3319,7 @@
       "x": 0.6,
       "y": 0.6,
       "uniqueID": "id-1797",
-      "name": "Extract bottom half",
+      "name": "Extract bottom half, lower mold",
       "ioValues": [
         {
           "name": "geometry",
@@ -3328,7 +3328,8 @@
       ],
       "tagIndex": 0,
       "selectedTags": [
-        "bottom half"
+        "bottom half",
+        "lower mold"
       ],
       "includeUntagged": false,
       "notKeepOut": false
@@ -3336,9 +3337,9 @@
     {
       "atomType": "Tag",
       "x": 0.6,
-      "y": 0.8,
+      "y": 0.6,
       "uniqueID": "id-1800",
-      "name": "bottom half",
+      "name": "lower mold",
       "ioValues": [
         {
           "name": "geometry",
@@ -3346,49 +3347,15 @@
         }
       ],
       "tags": [
-        "bottom half"
+        "lower mold"
       ]
-    },
-    {
-      "atomType": "Export",
-      "x": 0.7,
-      "y": 0.6,
-      "uniqueID": "id-1803",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "File Type",
-          "ioValue": "STEP",
-          "currentEquation": "STEP"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "STL Tolerance",
-          "ioValue": 0.002
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "tr1 nc mold bottom half",
-          "currentEquation": "tr1 nc mold bottom half"
-        }
-      ],
-      "type": null,
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "tr1 nc mold bottom half"
     },
     {
       "atomType": "Tag",
       "x": 0.7,
       "y": 0.2,
       "uniqueID": "id-1809",
-      "name": "top half",
+      "name": "middle mold",
       "ioValues": [
         {
           "name": "geometry",
@@ -3396,7 +3363,7 @@
         }
       ],
       "tags": [
-        "top half"
+        "middle mold"
       ]
     },
     {
@@ -3404,7 +3371,7 @@
       "x": 0.8,
       "y": 0.1,
       "uniqueID": "id-1815",
-      "name": "Extract top half",
+      "name": "Extract top half, middle mold",
       "ioValues": [
         {
           "name": "geometry",
@@ -3413,44 +3380,11 @@
       ],
       "tagIndex": 0,
       "selectedTags": [
-        "top half"
+        "top half",
+        "middle mold"
       ],
       "includeUntagged": false,
       "notKeepOut": false
-    },
-    {
-      "atomType": "Export",
-      "x": 0.9,
-      "y": 0.1,
-      "uniqueID": "id-1818",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "File Type",
-          "ioValue": "STEP",
-          "currentEquation": "STEP"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "STL Tolerance",
-          "ioValue": 0.002
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "tr1 nc mold top half",
-          "currentEquation": "tr1 nc mold top half"
-        }
-      ],
-      "type": null,
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "tr1 nc mold top half"
     },
     {
       "atomType": "Assembly",
@@ -4095,7 +4029,7 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.7,
+      "x": 0.4,
       "y": 0.9,
       "uniqueID": "id-2800",
       "name": "top divots",
@@ -4121,7 +4055,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.15
+              "ioValue": 0.17
             }
           ]
         },
@@ -4247,6 +4181,159 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.5,
+      "y": 0.8,
+      "uniqueID": "id-2831",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.7,
+      "y": 0.6,
+      "uniqueID": "id-2835",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "STL Tolerance",
+          "ioValue": 0.002
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "nc_mold_split",
+          "currentEquation": "nc_mold_split"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "nc_mold_split"
+    },
+    {
+      "atomType": "Tag",
+      "x": 0.6,
+      "y": 0.8,
+      "uniqueID": "id-2841",
+      "name": "upper mold",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tags": [
+        "upper mold"
+      ]
+    },
+    {
+      "atomType": "ExtractTag",
+      "x": 0.7,
+      "y": 0.8,
+      "uniqueID": "id-2844",
+      "name": "Extract upper mold",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tagIndex": 0,
+      "selectedTags": [
+        "upper mold"
+      ],
+      "includeUntagged": false,
+      "notKeepOut": false
+    },
+    {
+      "atomType": "Export",
+      "x": 0.8,
+      "y": 0.8,
+      "uniqueID": "id-2847",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "STL Tolerance",
+          "ioValue": 0.002
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "nc_mold_split",
+          "currentEquation": "nc_mold_split"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "nc_mold_split"
+    },
+    {
+      "atomType": "Export",
+      "x": 0.9,
+      "y": 0.1,
+      "uniqueID": "id-2853",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "STL Tolerance",
+          "ioValue": 0.002
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "nc_mold_split",
+          "currentEquation": "nc_mold_split"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "nc_mold_split"
     }
   ],
   "allConnectors": [
@@ -4273,7 +4360,7 @@
     {
       "ap2Name": "geometry",
       "ap1ID": "id-1797",
-      "ap2ID": "id-1803"
+      "ap2ID": "id-2835"
     },
     {
       "ap2Name": "geometry",
@@ -4288,7 +4375,7 @@
     {
       "ap2Name": "geometry",
       "ap1ID": "id-1815",
-      "ap2ID": "id-1818"
+      "ap2ID": "id-2853"
     },
     {
       "ap2Name": "number or geometry",
@@ -4356,6 +4443,11 @@
       "ap2ID": "id-2712"
     },
     {
+      "ap2Name": "retain",
+      "ap1ID": "id-2707",
+      "ap2ID": "id-2831"
+    },
+    {
       "ap2Name": "remove",
       "ap1ID": "id-2712",
       "ap2ID": "id-1705"
@@ -4369,6 +4461,26 @@
       "ap2Name": "geometry",
       "ap1ID": "id-2795",
       "ap2ID": "id-1809"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-2800",
+      "ap2ID": "id-2831"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2831",
+      "ap2ID": "id-2841"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2841",
+      "ap2ID": "id-2844"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2844",
+      "ap2ID": "id-2847"
     }
   ],
   "unitsKey": "Inches",
