@@ -4343,12 +4343,13 @@
       "ioValues": [
         {
           "name": "x length",
-          "ioValue": 0.2
+          "ioValue": 0.22,
+          "currentEquation": "0.22"
         },
         {
           "name": "y length",
-          "ioValue": 0.1,
-          "currentEquation": ".1"
+          "ioValue": 0.12,
+          "currentEquation": ".12"
         }
       ]
     },
@@ -4364,14 +4365,14 @@
         },
         {
           "name": "height",
-          "ioValue": 0.2,
-          "currentEquation": ".2"
+          "ioValue": 0.22,
+          "currentEquation": ".22"
         }
       ]
     },
     {
       "atomType": "Move",
-      "x": 0.6,
+      "x": 0.5,
       "y": 0.8,
       "uniqueID": "id-2873",
       "ioValues": [
@@ -4431,7 +4432,7 @@
     },
     {
       "atomType": "Move",
-      "x": 0.6,
+      "x": 0.5,
       "y": 0.9,
       "uniqueID": "id-2912",
       "ioValues": [
@@ -4453,6 +4454,87 @@
           "ioValue": 20
         }
       ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.6,
+      "y": 0.8,
+      "uniqueID": "id-2924",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.6,
+      "y": 0.9,
+      "uniqueID": "id-2928",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "cut-cut-cut-cut-cut-#36bc9d52957c055d0425b775796f0c46-cut-cut-#36bc9d52957c055d0425b775796f0c46-rotate-move-extrude-rectangle-40000-40000-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-4000-0-0-19-0-0-90-move-extrude-circle-0.085-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.18--0.125-1.2-19-move-extrude-circle-0.085-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.18--0.125--1.2-19-move-extrude-rectangle-0.22-0.12-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.22-0-0.2-20",
+            "tags": [],
+            "bom": [
+              "Haack series nose cone, length 19.25mm, outer diameter 6.825mm, C=0"
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "dimension": "3D"
+          }
+        },
+        {
+          "name": "Shape2",
+          "ioValue": {
+            "geometry": "move-extrude-rectangle-0.2-0.1-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.2-0--0.2-20",
+            "dimension": "3D",
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": []
+          }
+        }
+      ],
+      "unionType": "Fusion"
     }
   ],
   "allConnectors": [
@@ -4587,6 +4669,11 @@
       "ap2ID": "id-2831"
     },
     {
+      "ap2Name": "retain",
+      "ap1ID": "id-2831",
+      "ap2ID": "id-2924"
+    },
+    {
       "ap2Name": "geometry",
       "ap1ID": "id-2841",
       "ap2ID": "id-2844"
@@ -4607,6 +4694,11 @@
       "ap2ID": "id-2873"
     },
     {
+      "ap2Name": "remove",
+      "ap1ID": "id-2873",
+      "ap2ID": "id-2924"
+    },
+    {
       "ap2Name": "geometry",
       "ap1ID": "id-2910",
       "ap2ID": "id-2911"
@@ -4615,6 +4707,21 @@
       "ap2Name": "geometry",
       "ap1ID": "id-2911",
       "ap2ID": "id-2912"
+    },
+    {
+      "ap2Name": "Shape2",
+      "ap1ID": "id-2912",
+      "ap2ID": "id-2928"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-2924",
+      "ap2ID": "id-2928"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2928",
+      "ap2ID": "id-2841"
     }
   ],
   "unitsKey": "Inches",
