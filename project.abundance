@@ -3826,11 +3826,12 @@
             },
             {
               "name": "yDist",
-              "ioValue": 3
+              "ioValue": 1
             },
             {
               "name": "zDist",
-              "ioValue": 19
+              "ioValue": 19,
+              "currentEquation": "19"
             }
           ]
         },
@@ -3850,7 +3851,8 @@
             },
             {
               "name": "yDist",
-              "ioValue": -3
+              "ioValue": -1,
+              "currentEquation": "-1"
             },
             {
               "name": "zDist",
