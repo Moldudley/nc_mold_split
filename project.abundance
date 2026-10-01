@@ -4223,18 +4223,18 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "nc_mold_split",
-          "currentEquation": "nc_mold_split"
+          "ioValue": "[VE][AS] lower mold",
+          "currentEquation": "[VE][AS] lower mold"
         }
       ],
       "type": null,
       "resolution": 96,
       "importIndex": 0,
-      "partName": "nc_mold_split"
+      "partName": "[VE][AS] lower mold"
     },
     {
       "atomType": "Tag",
-      "x": 0.6,
+      "x": 0.8,
       "y": 0.8,
       "uniqueID": "id-2841",
       "name": "upper mold",
@@ -4250,8 +4250,8 @@
     },
     {
       "atomType": "ExtractTag",
-      "x": 0.7,
-      "y": 0.8,
+      "x": 0.9,
+      "y": 0.9,
       "uniqueID": "id-2844",
       "name": "Extract upper mold",
       "ioValues": [
@@ -4269,7 +4269,7 @@
     },
     {
       "atomType": "Export",
-      "x": 0.8,
+      "x": 0.9,
       "y": 0.8,
       "uniqueID": "id-2847",
       "ioValues": [
@@ -4292,14 +4292,14 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "nc_mold_split",
-          "currentEquation": "nc_mold_split"
+          "ioValue": "[VE][AS] upper mold",
+          "currentEquation": "[VE][AS] upper mold"
         }
       ],
       "type": null,
       "resolution": 96,
       "importIndex": 0,
-      "partName": "nc_mold_split"
+      "partName": "[VE][AS] upper mold"
     },
     {
       "atomType": "Export",
@@ -4326,14 +4326,31 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "nc_mold_split",
-          "currentEquation": "nc_mold_split"
+          "ioValue": "[VE][AS] middle mold",
+          "currentEquation": "[VE][AS] middle mold"
         }
       ],
       "type": null,
       "resolution": 96,
       "importIndex": 0,
-      "partName": "nc_mold_split"
+      "partName": "[VE][AS] middle mold"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.6,
+      "y": 0.8,
+      "uniqueID": "id-2865",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 0.2
+        },
+        {
+          "name": "y length",
+          "ioValue": 0.2,
+          "currentEquation": ".2"
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -4466,11 +4483,6 @@
       "ap2Name": "remove",
       "ap1ID": "id-2800",
       "ap2ID": "id-2831"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2831",
-      "ap2ID": "id-2841"
     },
     {
       "ap2Name": "geometry",
