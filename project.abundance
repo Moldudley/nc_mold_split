@@ -3753,6 +3753,30 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.4,
+      "y": 0.3,
+      "uniqueID": "id-2712",
+      "ioValues": [
+        {
+          "name": "makeDisjoint",
+          "ioValue": true
+        },
+        {
+          "name": "Shape 1",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape2",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape3",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -3802,11 +3826,6 @@
       "ap2ID": "id-1196"
     },
     {
-      "ap2Name": "remove",
-      "ap1ID": "id-1625",
-      "ap2ID": "id-1705"
-    },
-    {
       "ap2Name": "Shape 1",
       "ap1ID": "id-1625",
       "ap2ID": "id-1740"
@@ -3815,6 +3834,11 @@
       "ap2Name": "Shape 2",
       "ap1ID": "id-1625",
       "ap2ID": "id-1824"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1625",
+      "ap2ID": "id-2712"
     },
     {
       "ap2Name": "Shape 2",
@@ -3855,6 +3879,16 @@
       "ap2Name": "Shape3",
       "ap1ID": "id-2707",
       "ap2ID": "id-1824"
+    },
+    {
+      "ap2Name": "Shape2",
+      "ap1ID": "id-2707",
+      "ap2ID": "id-2712"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-2712",
+      "ap2ID": "id-1705"
     }
   ],
   "unitsKey": "Inches",
